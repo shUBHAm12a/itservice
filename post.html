@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .post-container {
+        max-width: 800px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      h1 {
+        margin-top: 15px;
+      }
+      p {
+        color: #444;
+        line-height: 1.6;
+      }
+      a {
+        display: inline-block;
+        margin-top: 15px;
+        color: #0d47a1;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="post-container">
+      <img id="postImage" src="" alt="Post Image" />
+      <h1 id="postTitle"></h1>
+      <p id="postFull"></p>
+      <a href="blog.html">← Back to Blog</a>
+    </div>
+
+    <script>
+      const blog = JSON.parse(localStorage.getItem("selectedBlog"));
+      if (blog) {
+        document.getElementById("postImage").src = blog.image;
+        document.getElementById("postTitle").textContent = blog.title;
+        document.getElementById("postFull").textContent = blog.full;
+      } else {
+        document.querySelector(".post-container").innerHTML =
+          "<p>Post not found.</p>";
+      }
+    </script>
+  </body>
+</html>

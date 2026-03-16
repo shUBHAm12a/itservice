@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Services | TechSolutions Inc.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+       <link rel="stylesheet" href="itservice.css"> </link>
+     <!-- footer -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css?_cacheOverride=1755151857395" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+<!--  -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <style>
+        /* Global Styles */
+ 
+  
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-family: fantasy;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: #0c1450;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 242, 254, 0.3);
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 242, 254, 0.5);
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 50px ;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #00f2fe;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            opacity: 0.8;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 242, 254, 0.3);
+        }
+        
+        .service-icon {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            background: rgba(0, 242, 254, 0.1);
+            color: #00f2fe;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4facfe;
+        }
+        
+        .service-description {
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        .service-features {
+            margin-top: 20px;
+        }
+        
+        .service-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-features li:before {
+            content: "✓";
+            color: #00f2fe;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .learn-more {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #00f2fe;
+            border: 1px solid #00f2fe;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        
+        .learn-more:hover {
+            background: rgba(0, 242, 254, 0.1);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            padding: 70px 0;
+            background: rgba(12, 20, 80, 0.3);
+            margin: 70px 0;
+            border-radius: 20px;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            padding: 40px ;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .testimonial-text:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -15px;
+            font-size: 4rem;
+            color: rgba(0, 242, 254, 0.3);
+            font-family: serif;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(0, 242, 254, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        
+        .client-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .client-position {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+       
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mainwrapper">
+        <!-- Header -->
+<div class="hamburger">
+  <i class="fa-solid fa-bars bars"></i>
+</div>
+
+        <header>
+            <div class="headerwrapper">
+                <div class="headerinnerwrapper">
+                    <a href="index.html">
+                        <ul class="home header animate__animated animate__zoomIn">Home</ul>
+                    </a> 
+
+                    <a href="#">
+                    <ul class="header animate__animated animate__zoomIn">Services</ul>
+</a>
+                  <a href="project.html">
+                    <ul class="header animate__animated animate__zoomIn">Project</ul>
+                  </a>
+                  <a href="itblog.html">
+                    <ul class="header animate__animated animate__zoomIn">Blog</ul>
+                 </a>
+                 <a href="contact.html">
+                    <ul class="header animate__animated animate__zoomIn">Contact Us</ul>
+                 </a>
+ <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <!-- <div class="contentwrapper"> -->
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1>Transform Your Business with Cutting-Edge IT Solutions</h1>
+                <p>We deliver innovative technology services that drive growth, enhance security, and streamline operations for businesses of all sizes.</p>
+                <a href="#contact" class="cta-button">Get a Free Consultation</a>
+            </section>
+            
+            <!-- Services Section -->
+            <section class="services-section">
+                <h2 class="section-title">Our IT Services</h2>
+                <p class="section-subtitle">Comprehensive technology solutions designed to meet your unique business requirements</p>
+                
+                <div class="services-grid">
+                    <!-- Service Card 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Cybersecurity Solutions</h3>
+                            <p class="service-description">Protect your business from evolving threats with our comprehensive security solutions including threat detection, vulnerability assessments, and incident response.</p>
+                            <ul class="service-features">
+                                <li>24/7 Security Monitoring</li>
+                                <li>Data Encryption & Protection</li>
+                                <li>Compliance Management</li>
+                                <li>Security Awareness Training</li>
+                            </ul>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 2 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Cloud Services & Migration</h3>
+                            <p class="service-description">Leverage the power of cloud computing with our migration, management, and optimization services for AWS, Azure, and Google Cloud platforms.</p>
+                            <ul class="service-features">
+                                <li>Cloud Infrastructure Setup</li>
+                                <li>Migration Planning & Execution</li>
+                                <li>Cost Optimization</li>
+                                <li>Hybrid Cloud Solutions</li>
+                            </ul>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">IT Infrastructure</h3>
+                            <p class="service-description">Design, implement, and manage robust IT infrastructure solutions that support your business growth and digital transformation initiatives.</p>
+                            <ul class="service-features">
+                                <li>Network Design & Implementation</li>
+                                <li>Server Management</li>
+                                <li>Virtualization Solutions</li>
+                                <li>Disaster Recovery Planning</li>
+                            </ul>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 4 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Data & Analytics</h3>
+                            <p class="service-description">Transform your data into actionable insights with our business intelligence, analytics, and data management solutions.</p>
+                            <ul class="service-features">
+                                <li>Data Warehousing</li>
+                                <li>Business Intelligence Dashboards</li>
+                                <li>Predictive Analytics</li>
+                                <li>Data Governance</li>
+                            </ul>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 5 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Managed IT Services</h3>
+                            <p class="service-description">Outsource your IT operations to our expert team for proactive monitoring, maintenance, and support 24/7/365.</p>
+                            <ul class="service-features">
+                                <li>Help Desk Support</li>
+                                <li>Proactive Monitoring</li>
+                                <li>Patch Management</li>
+                                <li>IT Asset Management</li>
+                            </ul>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 6 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">IT Consulting</h3>
+                            <p class="service-description">Strategic technology guidance to align your IT investments with business goals and drive digital transformation.</p>
+                            <ul class="service-features">
+                                <li>Technology Roadmapping</li>
+                                <li>Digital Transformation</li>
+                                <li>IT Budget Optimization</li>
+                                <li>Vendor Selection</li>
+                            </ul>
+                            <a href="#" class="learn-more">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Client Retention Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">350+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support Availability</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Testimonials Section -->
+            <section class="testimonials-section">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Don't just take our word for it - hear from businesses we've transformed</p>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Their cybersecurity team implemented a comprehensive protection strategy that helped us pass our compliance audit with flying colors. The peace of mind is priceless.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <div class="client-name">Sarah Johnson</div>
+                                <div class="client-position">CTO, FinSecure Inc.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">The cloud migration was seamless and completed ahead of schedule. We've reduced our IT costs by 40% while improving system performance.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <div class="client-name">Michael Rodriguez</div>
+                                <div class="client-position">Operations Director, RetailTech</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Their managed IT services have transformed our operations. We finally have an IT partner that proactively solves problems before they impact our business.</p>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <div class="client-name">Jennifer Kim</div>
+                                <div class="client-position">CEO, HealthFirst Clinic</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- </div> -->
+        
+        <!-- Footer -->
+        <div class="footerwrapper">
+     <div class="footerheader">
+            <span class="footerheading">IT SERVICES</span>
+            <p> Stay in the loop  and  sign  up  for  the wardiere newsletter</p>
+            <div class="input-group">
+               <input type="email" class="input" id="Email" name="Email" placeholder="Enter your email" autocomplete="off">
+               <button type="submit" class="button--submit">
+               <i class="bi bi-arrow-right"></i>
+               </button>
+            </div>
+
+<!--  -->
+
+<ul class="wrapper">
+     <span class="footterinnerhead" style="font-size: 25px; font-weight: 500; font-family: fantasy; color:white; margin-top: 15px; ">SOCIALS</span>
+<li class="icon facebook">
+    <span class="tooltip">Facebook</span>
+    <svg
+      viewBox="0 0 320 512"
+      height="1.2em"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+      ></path>
+    </svg>
+  </li>
+  <li class="icon twitter">
+    <span class="tooltip">Twitter</span>
+    <svg
+      height="1.8em"
+      fill="currentColor"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+      class="twitter"
+    >
+      <path
+        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+      ></path>
+    </svg>
+  </li>
+  <li class="icon instagram">
+    <span class="tooltip">Instagram</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="1.2em"
+      fill="currentColor"
+      class="bi bi-instagram"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+      ></path>
+    </svg>
+  </li>
+  
+</ul>
+<!--  -->
+
+         </div>
+         <!-- </div> -->
+
+<div class="footerinner">
+ <span class="footterinnerhead" style="font-size: 25px; font-weight: 500; font-family: fantasy; color:white; ">USEFUL LINKS</span>
+<span>✦Home</span>
+<span>✦Services</span>
+<span>✦Project</span>
+<span>✦Blog</span>
+<span>✦Contact Us</span>
+</div>
+
+
+<div class="footerinner">
+ <span class="footterinnerheadtwo" style="font-size: 25px; font-weight: 500; font-family: fantasy; color:white; ">USEFUL LINKS</span>
+<span>✦IT Infrastructure</span>
+<span>✦Data & Analytics</span>
+<span>✦IT Consulting Strategy</span>
+<span>✦Cloud Solutions & Migration</span>
+<span>✦Cybersecurity & Data Protection</span>
+<span>✦Managed IT Services</span>
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    <div class="footerend ">Copyright © 2025 REDQ All rights reserved</div>
+    </div>
+
+        <script src="itservices.js"></script>
+
+</body>
+</html>

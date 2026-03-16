@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Services Blog</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+      }
+      header {
+        background: #0d47a1;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      .blog-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+      .blog-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .blog-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .blog-content {
+        padding: 15px;
+      }
+      .blog-content h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      .blog-content p {
+        color: #555;
+      }
+      .read-more {
+        display: inline-block;
+        margin-top: 10px;
+        color: #0d47a1;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>IT Services Blog</h1>
+    </header>
+
+    <div class="blog-container" id="blogContainer"></div>
+
+    <script>
+      const blogs = [
+        {
+          title: "Why Cybersecurity Matters in 2026",
+          image:
+            "https://i.pinimg.com/736x/2c/15/10/2c151085ff57241ce5be48fbd25b1bf5.jpg",
+          short:
+            "In today’s digital world, cybersecurity is no longer optional...",
+          full: "Cybersecurity in 2025 is about much more than just defense—it is about staying one step ahead of attackers. With proactive threat detection powered by artificial intelligence and machine learning, organizations are now able to identify unusual activity before it turns into a full-scale breach. AI-driven security systems also allow faster, automated responses, reducing the gap between detection and action. At the same time, the zero-trust model has become a standard approach, ensuring that no user, device, or application is trusted by default, which significantly reduces both insider and external risks. Businesses must also recognize that technology alone cannot guarantee safety. Employee training is essential, as human error still accounts for the majority of security incidents. Regular security audits and compliance checks help companies stay aligned with global standards, while timely software updates and patch management close vulnerabilities before they can be exploited. As more businesses move into hybrid and multi-cloud environments, securing cloud platforms and encrypting sensitive data has become a top priority. The rapid rise of mobile devices and the Internet of Things also demands stronger protections, since every connected device can serve as a potential entry point for attackers. In addition, companies are focusing on robust incident response planning to ensure quick recovery with minimal disruption when breaches occur. Collaboration and threat intelligence sharing between organizations, industries, and even governments are strengthening the global cybersecurity ecosystem. Ultimately, cybersecurity in 2025 is about resilience, adaptability, and intelligence—creating systems that not only defend against threats but also anticipate and neutralize them before damage is done.",
+        },
+        {
+          title: "Cloud Solutions for Modern Businesses",
+          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+          short: "Cloud computing is transforming the way companies work...",
+          full: "Cloud solutions allow businesses to scale quickly, reduce costs, and improve collaboration. Hybrid cloud models and security-focused architectures are now leading the way for enterprises.",
+        },
+        {
+          title: "How AI is Changing IT Services",
+          image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+          short:
+            "Artificial Intelligence is revolutionizing IT service delivery...",
+          full: "AI enhances IT services through predictive maintenance, smart automation, and advanced analytics. From chatbots to security, AI-driven solutions improve efficiency and user experience.",
+        },
+      ];
+
+      const container = document.getElementById("blogContainer");
+
+      blogs.forEach((blog, index) => {
+        const card = document.createElement("div");
+        card.classList.add("blog-card");
+        card.innerHTML = `
+            <img src="${blog.image}" alt="${blog.title}">
+            <div class="blog-content">
+                <h2>${blog.title}</h2>
+                <p>${blog.short}</p>
+                <a href="post.html" class="read-more" data-index="${index}">Read More →</a>
+            </div>
+        `;
+        container.appendChild(card);
+      });
+
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("read-more")) {
+          e.preventDefault();
+          const index = e.target.getAttribute("data-index");
+          localStorage.setItem("selectedBlog", JSON.stringify(blogs[index]));
+          window.location.href = "post.html";
+        }
+      });
+    </script>
+  </body>
+</html>
